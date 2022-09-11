@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio&display=swap');
+
+@keyframes fundo-star-animation{
+	to{
+		background-size: 180% 180%;
+	}
+}
+
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	height: 100vh;
+
+	background-size: 200% 200%;
+	background-image: url('imagens/fundo-star.jpg');
+
+	animation: fundo-star-animation 10s ease-in-out alternate infinite;
+}
+
+#cabecalho{
+	margin-bottom: 50px;
+	text-align: center;
+	padding: 20px;
+	border-bottom: 1px solid rgba(255, 255, 255, .600);
+}
+.nav-bar a{
+	color: white;
+	font-weight: bolder;
+	text-decoration: none;
+	font-family: 'Antonio', sans-serif;
+	font-size: 1.9em;
+	margin: 0 10px 0 0;
+
+	transition: all 0.1s ease-in;
+}
+.nav-bar a:hover{
+	text-shadow: 10px 7px 10px rgba(0, 0, 0, .100);
+	color: rgba(255, 255, 255, .920);
+}
+
+table{
+	border-collapse: collapse;
+	color: white;
+	background-color: rgba(0, 0, 0, .400);
+	width: 400px;
+
+	margin: auto;
+}
+caption{
+	margin-bottom: 10px;
+	color: rgba(255, 255, 255, .800);
+	padding: 10px;
+	background-color: rgba(255, 255, 255, .100);
+	font-size: 2em;
+}
+caption::after{
+	margin-left: 20px;
+	content: '\2148';
+}
+.table-num{
+	text-align: right;
+}
+th{
+	font-size: 1.4em;
+	color: white;
+	background-color: #663399;
+}
+th::after{
+	margin-left: 7px;
+	content: "\2605";
+}
+td::after{
+	margin-left: 8px;
+	content: '\2148';
+}
+.table-num::after{
+	content: '\00A4';
+}
+td,th{
+	padding: 15px;
+	border: 1px solid white;
+}
+
+
+#conteudo-nasa{
+	position: relative;
+	top: 20px;
+
+	margin: auto;
+	width: 450px;
+	color: white;
+	padding: 10px;
+	background-color: rgba(0, 0, 0, .400);
+	border-radius: 4px;
+}
+#conteudo-nasa h2{
+	text-align: center;
+	font-size: 2.4em;
+	margin-bottom: 20px;
+}
+#conteudo-nasa p{
+	line-height: 30px;
+	text-align: justify;
+	font-size: 1.5em;
+}
+
+@media (min-width: 900px) and (max-width: 1460px){
+	#cabecalho{
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+	.nav-bar a{
+		margin-right: 70px;
+	}
+	table{
+		width: 900px;
+	}
+	#conteudo-nasa{
+		width: 900px;
+	}
+	#rodape{
+		font-size: 1.9em;
+	}
+}
+
+@media (min-width: 600px) and (max-width: 900px){
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	#cabecalho{
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+	table{
+		width: 600px;
+	}
+	#conteudo-nasa{
+		width: 620px;
+	}
+
+	#rodape{
+		font-size: 1.5em;
+	}
+}
+
+
+#rodape{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin-top: 60px;
+
+	color: white;
+	border-top: 1px solid rgba(255, 255, 255, .600);
+	padding: 20px;
+	font-size: 1.2em;
+}
+#rodape a{
+	text-decoration: none;
+	color: gray;
+}
+#rodape a:hover{
+	text-decoration: underline;
+	color: lightgray;
+}
+#rodape a::after{
+	margin-left: 7px;
+	content: '\290F';
+}
